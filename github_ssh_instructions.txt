@@ -1,0 +1,15 @@
+Follow these steps to set up an SSH Key. Along with many other benefits,
+the SSH key will allow you to push to github without entering your
+Github username and password every time!
+
+1. Go to https://www.github.com/settings/keys
+2. Click on new SSH key, don't type anything.
+3. Run cd ~; ssh-keygen -t rsa (enter three times, no passphrase, no file path needed)
+4. Now run cat ~/.ssh/id_rsa.pub
+5. Copy the ENTIRE contents of id_rsa.pub into your new SSH key
+6. Make a personal remote directory called lect7 by going to https://www.github.com/new
+7. Make a new local repo: 
+    cd ~/environment/; mkdir lect7; cd lect7; git init
+8. Now add the remote URL:
+    git remote add origin http://www.github.com/[your_username]/lect7
+    git remote set-url origin git+ssh://git@github.com/[your_username]/lect7.git
