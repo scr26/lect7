@@ -13,3 +13,12 @@ Github username and password every time!
 8. Now add the remote URL:
     git remote add origin http://www.github.com/[your_username]/lect7
     git remote set-url origin git+ssh://git@github.com/[your_username]/lect7.git
+    
+    
+    
+To test that this works, add a README file:
+9. touch README && echo "test" >> README
+10. git add README && git commit -m "Add README file"
+11. Push your commit by running: git push origin master
+    When asked if you want to continue, type "yes" and press enter.
+12. You should be able to push to Github now without typing your username/password in!
